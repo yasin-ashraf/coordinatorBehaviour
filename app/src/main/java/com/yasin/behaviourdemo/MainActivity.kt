@@ -1,13 +1,13 @@
 package com.yasin.behaviourdemo
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.chip.ChipGroup
-
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.layout_appbar_second_view.*
 
 class MainActivity : AppCompatActivity(), ChipGroup.OnCheckedChangeListener {
 
@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity(), ChipGroup.OnCheckedChangeListener {
         applyWindowInsets()
         nav_chips.setOnCheckedChangeListener(this)
         chip_car.isChecked = true
+        recycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+        recycler.adapter = RecyclerAdapter()
     }
 
     private fun applyWindowInsets() {
@@ -36,15 +38,11 @@ class MainActivity : AppCompatActivity(), ChipGroup.OnCheckedChangeListener {
             lpActionBar.rightMargin += windowInsets.systemWindowInsetRight
             appBar.layoutParams = lpActionBar
 
-            /*val lpBottomNavigation = bottom_navigation?.layoutParams as ViewGroup.MarginLayoutParams
-            lpBottomNavigation.bottomMargin += windowInsets.systemWindowInsetBottom
-            lpBottomNavigation.leftMargin += windowInsets.systemWindowInsetLeft
-            lpBottomNavigation.rightMargin += windowInsets.systemWindowInsetRight
-            bottom_navigation.layoutParams = lpBottomNavigation
-
-            val lpViewPagerIndicator = committee_card_indicator?.layoutParams as ViewGroup.MarginLayoutParams
-            lpViewPagerIndicator.bottomMargin = lpViewPagerIndicator.bottomMargin + windowInsets.systemWindowInsetBottom + lpBottomNavigation.bottomMargin + bottom_navigation.height
-            committee_card_indicator.layoutParams = lpViewPagerIndicator*/
+            val lpRecycler = recycler?.layoutParams as ViewGroup.MarginLayoutParams
+            lpRecycler.bottomMargin += windowInsets.systemWindowInsetBottom
+            lpRecycler.leftMargin += windowInsets.systemWindowInsetLeft
+            lpRecycler.rightMargin += windowInsets.systemWindowInsetRight
+            recycler.layoutParams = lpRecycler
 
             // clear this listener so insets aren't re-applied
             coordinator.setOnApplyWindowInsetsListener(null)

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_chips"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:background="@drawable/main_content_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/nav_chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:chipSpacing="10dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:singleSelection="true"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_car"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            app:chipIcon="@drawable/ic_car"
+            app:chipIconVisible="true"
+            app:chipIconTint="@color/chip_icon_selector"
+            app:chipBackgroundColor="@color/chip_bg_selector"
+            app:chipStrokeColor="#ccc"
+            app:chipStrokeWidth="1dp"
+            android:text="9 min"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:textColor="@color/chip_icon_selector"
+            app:chipStartPadding="6dp"
+            app:chipEndPadding="0dp"
+            app:chipIconEnabled="true"
+            app:iconEndPadding="0dp"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_bus"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            app:chipIcon="@drawable/ic_bus"
+            app:chipIconVisible="true"
+            app:chipIconTint="@color/chip_icon_selector"
+            app:chipBackgroundColor="@color/chip_bg_selector"
+            app:chipStrokeColor="#ccc"
+            app:chipStrokeWidth="1dp"
+            android:text="15 min"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:textColor="@color/chip_icon_selector"
+            app:chipStartPadding="6dp"
+            app:chipEndPadding="0dp"
+            app:chipIconEnabled="true"
+            app:iconEndPadding="0dp"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_walk"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            app:chipIcon="@drawable/ic_walk"
+            app:chipIconVisible="true"
+            app:chipIconTint="@color/chip_icon_selector"
+            app:chipBackgroundColor="@color/chip_bg_selector"
+            app:chipStrokeColor="#ccc"
+            app:chipStrokeWidth="1dp"
+            android:text="30 min"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:textColor="@color/chip_icon_selector"
+            app:chipStartPadding="6dp"
+            app:chipEndPadding="0dp"
+            app:chipIconEnabled="true"
+            app:iconEndPadding="0dp"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_rail"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            app:chipIcon="@drawable/ic_railway"
+            app:chipIconVisible="true"
+            app:chipIconTint="@color/chip_icon_selector"
+            app:chipBackgroundColor="@color/chip_bg_selector"
+            app:chipStrokeColor="#ccc"
+            app:chipStrokeWidth="1dp"
+            android:text="12 min"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:textColor="@color/chip_icon_selector"
+            app:chipStartPadding="6dp"
+            app:chipEndPadding="0dp"
+            app:chipIconEnabled="true"
+            app:iconEndPadding="0dp"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>
