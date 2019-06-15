@@ -1,5 +1,6 @@
 package com.yasin.behaviourdemo
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -34,14 +35,10 @@ class MainActivity : AppCompatActivity(), ChipGroup.OnCheckedChangeListener {
 
             val lpActionBar = appBar?.layoutParams as ViewGroup.MarginLayoutParams
             lpActionBar.topMargin += windowInsets.systemWindowInsetTop
-            lpActionBar.leftMargin += windowInsets.systemWindowInsetLeft
-            lpActionBar.rightMargin += windowInsets.systemWindowInsetRight
             appBar.layoutParams = lpActionBar
 
             val lpRecycler = recycler?.layoutParams as ViewGroup.MarginLayoutParams
             lpRecycler.bottomMargin += windowInsets.systemWindowInsetBottom
-            lpRecycler.leftMargin += windowInsets.systemWindowInsetLeft
-            lpRecycler.rightMargin += windowInsets.systemWindowInsetRight
             recycler.layoutParams = lpRecycler
 
             // clear this listener so insets aren't re-applied
