@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="20dp"
+    app:strokeColor="@color/light_white"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_departure_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/light_white"
+            android:text="Departure on :"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_departure_on"
+            android:textColor="#000"
+            android:text="05"
+            android:textSize="40sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_minutes"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_minutes"
+            app:layout_constraintEnd_toEndOf="@id/tv_departure_on"
+            android:textColor="#a1a1a1"
+            android:text="min"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@id/tv_departure_on"
+            app:layout_constraintEnd_toStartOf="@id/tv_time_now"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_travel_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Travel Time :"
+                android:textColor="@color/light_white"/>
+
+            <TextView
+                android:id="@+id/tv_travel_time_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13 min"
+                android:layout_marginStart="4dp"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="5dp"
+            android:text="13 : 55"
+            android:textColor="@color/colorAccent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="5dp"
+            app:icon="@drawable/ic_cart"
+            app:iconTint="@color/colorSecondaryVariant"
+            android:backgroundTint="@color/colorSecondary"
+            android:text="Ticket : Rs.1150"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
