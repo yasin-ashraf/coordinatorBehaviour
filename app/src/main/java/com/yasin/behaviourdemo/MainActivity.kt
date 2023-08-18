@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity(), ChipGroup.OnCheckedChangeListener {
 
     private fun init() {
         applyWindowInsets()
-        binding.secondView.navChips.setOnCheckedChangeListener(this)
-        binding.secondView.chipCar.isChecked = true
+        binding.navChips.setOnCheckedChangeListener(this)
+        binding.chipCar.isChecked = true
         binding.recycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         binding.recycler.adapter = RecyclerAdapter()
     }
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), ChipGroup.OnCheckedChangeListener {
     override fun onCheckedChanged(group: ChipGroup, checkedId: Int) {
         when(checkedId){
             R.id.chip_car -> {
-                binding.secondView.navChips.checkedChipId
+                binding.navChips.checkedChipId
             }
             R.id.chip_bus -> {
 
